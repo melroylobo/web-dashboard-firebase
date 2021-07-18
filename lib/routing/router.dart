@@ -1,22 +1,24 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_web_dashboard/pages/clients/clients.dart';
-// import 'package:flutter_web_dashboard/pages/drivers/drivers.dart';
-// import 'package:flutter_web_dashboard/pages/overview/overview.dart';
-// import 'package:flutter_web_dashboard/routing/routes.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_web_dashboard/overview/overview.dart';
+import 'package:flutter_web_dashboard/pages/clients/clients.dart';
+import 'package:flutter_web_dashboard/pages/drivers/drivers.dart';
 
-// Route<dynamic> generateRoute(RouteSettings settings) {
-//   switch (settings.name) {
-//     case overviewPageRoute:
-//       return _getPageRoute(OverviewPage());
-//     case driversPageRoute:
-//       return _getPageRoute(DriversPage());
-//     case clientsPageRoute:
-//       return _getPageRoute(ClientsPage());
-//     default:
-//       return _getPageRoute(OverviewPage());
-//   }
-// }
+import 'package:flutter_web_dashboard/routing/routes.dart';
 
-// PageRoute _getPageRoute(Widget child) {
-//   return MaterialPageRoute(builder: (context) => child);
-// }
+Route<dynamic> generateRoute(RouteSettings settings) {
+  switch (settings.name) {
+    case OverViewPageRoute:
+      return _getPageRoute(OverviewPage());
+    case DriversPageRoute:
+      return _getPageRoute(DriversPage());
+    case ClientsPageRoute:
+      return _getPageRoute(ClientsPage());
+
+    default:
+      return _getPageRoute(OverviewPage());
+  }
+}
+
+PageRoute _getPageRoute(Widget child) {
+  return MaterialPageRoute(builder: (context) => child);
+}
