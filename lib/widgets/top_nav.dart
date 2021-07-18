@@ -72,8 +72,8 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
           CustomText(
             text: "Santos Enoque",
             color: lightGrey,
-            size: 30,
-            weight: FontWeight.bold,
+            size: 16,
+            weight: FontWeight.normal,
           ),
           SizedBox(
             width: 16,
@@ -96,5 +96,5 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
         ],
       ),
       iconTheme: IconThemeData(color: dark),
-      backgroundColor: light,
+      backgroundColor: Colors.transparent,
     );

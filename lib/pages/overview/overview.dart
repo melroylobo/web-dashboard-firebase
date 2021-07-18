@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_dashboard/constants/controllers.dart';
 import 'package:flutter_web_dashboard/helpers/responsiveness.dart';
+import 'package:flutter_web_dashboard/pages/overview/widgets/overview_cards_large.dart';
+import 'package:flutter_web_dashboard/pages/overview/widgets/overview_cards_medium.dart';
+import 'package:flutter_web_dashboard/pages/overview/widgets/overview_cards_small.dart';
 import 'package:flutter_web_dashboard/widgets/custom_text.dart';
 import 'package:get/get.dart';
 
@@ -30,14 +33,14 @@ class OverviewPage extends StatelessWidget {
           Expanded(
               child: ListView(
             children: [
-              // if (ResponsivenessWidget.isLageScreen(context) ||
-              //     ResponsivenessWidget.isMediumScreen(context))
-              //   if (ResponsivenessWidget.isCustomScreen(context))
-              //     OverviewCardsMediumScreen()
-              //   else
-              //     OverviewCardsLargeScreen()
-              // else
-              //   OverviewCardsSmallScreen(),
+              if (ResponsivenessWidget.isLargeScreen(context) ||
+                  ResponsivenessWidget.isMediumScreen(context))
+                if (ResponsivenessWidget.isCustomSize(context))
+                  OverviewCardsMediumScreen()
+                else
+                  OverviewCardsLargeScreen()
+              else
+                OverviewCardsSmallScreen(),
               // if (!ResponsivenessWidget.isSmallScreen(context))
               //   RevenueSectionLarge()
               // else
