@@ -9,9 +9,9 @@ class CustomText extends StatelessWidget {
   const CustomText(
       {Key? key,
       required this.text,
-      required this.size,
-      required this.color,
-      required this.weight})
+      this.size = 12,
+      this.color = Colors.orange,
+      this.weight = FontWeight.bold})
       : super(key: key);
 
   @override

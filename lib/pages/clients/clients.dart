@@ -35,7 +35,7 @@ class ClientsPage extends StatelessWidget {
           Expanded(
               child: ListView(
             children: [
-              // Clientstable(),
+              Clientstable(),
             ],
           )),
         ],
