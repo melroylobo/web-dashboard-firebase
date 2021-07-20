@@ -8,11 +8,11 @@ import 'package:flutter_web_dashboard/routing/routes.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
-    case OverViewPageRoute:
+    case overviewPageRoute:
       return _getPageRoute(OverviewPage());
-    case DriversPageRoute:
+    case driversPageRoute:
       return _getPageRoute(DriversPage());
-    case ClientsPageRoute:
+    case clientsPageRoute:
       return _getPageRoute(ClientsPage());
 
     default:

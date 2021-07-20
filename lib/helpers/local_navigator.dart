@@ -5,6 +5,6 @@ import 'package:flutter_web_dashboard/routing/routes.dart';
 
 Navigator localNavigator() => Navigator(
       key: navigationController.navigationKey,
-      initialRoute: OverViewPageRoute,
+      initialRoute: overviewPageRoute,
       onGenerateRoute: generateRoute,
     );
